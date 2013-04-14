@@ -12,7 +12,7 @@
     "partial function application",
     "curry"
   ],
-  "dependencies" : {},
+  "dependencies": {},
   "devDependencies": {
     "mocha": "1.7.x",
     "expect.js": "0.2.x",
