@@ -1,0 +1,27 @@
+{
+  "name": "sublish",
+  "repo": "pluma/sublish",
+  "description": "Minimalist publish/subscribe.",
+  "keywords": [
+    "pubsub",
+    "publish",
+    "subscribe",
+    "pubsub"
+  ],
+  "version": "0.3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.7.x",
+    "expect": "0.2.x",
+    "uglify-js": "1.3.x"
+  },
+  "scripts": ["dist/sublish.js"],
+  "main": "./dist/sublish.js",
+  "ignore": [
+    "**/.*",
+    "build",
+    "components",
+    "node_modules"
+  ],
+  "license": "MIT"
+}
