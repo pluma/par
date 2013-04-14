@@ -2,6 +2,18 @@
 
 **par** is a JavaScript implementation of partial function application (sometimes incorrectly called "currying").
 
+# How is this different from [`Function#bind`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind)?
+
+The primary purpose of `Function#bind` is to create a closure to preserve a function's context (the `this` variable). Most implementations, including the one in ES 5, also allow partial function application.
+
+The functions provided by `par` also create closures, but they pass their own context along. This means `Function#apply`, `Function#call` and method invocation syntax still behave as expected (with the context being set accordingly).
+
+If you don't care about contexts (e.g. the function you want to wrap doesn't use `this`), `lpartial` and `Function#bind` can be used interchangeably.
+
+There is no native equivalent of `rpartial`.
+
+Another important distinction is that unlike `Function#bind`, `par` works in environments that don't support ECMAScript 5, such as legacy versions of Internet Explorer (versions 8 and lower) or Rhino (e.g. the version bundled with Sun JDK 1.6).
+
 # Install
 
 ## Node.js
