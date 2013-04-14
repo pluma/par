@@ -31,6 +31,14 @@ component install pluma/par
 
 [Learn more about component](https://github.com/component/component).
 
+### With bower
+
+```sh
+bower install par
+```
+
+[Learn more about bower](https://github.com/twitter/bower).
+
 ### With a CommonJS module loader
 
 Download the [latest minified CommonJS release](https://github.com/pluma/par/dist/par.min.js) and add it to your project.
