@@ -1,22 +1,21 @@
 {
-  "name": "sublish",
-  "repo": "pluma/sublish",
-  "description": "Minimalist publish/subscribe.",
+  "name": "par",
+  "repo": "pluma/par",
+  "description": "Simple partial function application.",
   "keywords": [
-    "pubsub",
-    "publish",
-    "subscribe",
-    "pubsub"
+    "partial",
+    "partial function application",
+    "curry"
   ],
-  "version": "0.3.0",
+  "version": "0.1.0",
   "dependencies": {},
   "devDependencies": {
     "mocha": "1.7.x",
     "expect": "0.2.x",
     "uglify-js": "1.3.x"
   },
-  "scripts": ["dist/sublish.js"],
-  "main": "./dist/sublish.js",
+  "scripts": ["dist/par.js"],
+  "main": "./dist/par.js",
   "ignore": [
     "**/.*",
     "build",
