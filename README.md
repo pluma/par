@@ -79,7 +79,7 @@ This makes the `par` module available in the global namespace.
 var par = require('par');
 
 function divideBy(x, y) {
-	return x / y;
+    return x / y;
 }
 
 var divide4By = par.lpartial(divideBy, 4);
@@ -87,6 +87,22 @@ console.log(divide4By(10)); // 0.4
 
 var divideBy4 = par.rpartial(divideBy, 4);
 console.log(divideBy4(10)); // 2.5
+```
+
+# Wrap-around example
+
+```javascript
+var par = require('par');
+
+function say() {
+    console.log.apply(console, arguments);
+}
+
+say('I love Internet Explorer!'); // "I love Internet Explorer!"
+
+var sarcastic = par.rpartial(par.lpartial(say, '[sarcasm]'), '[/sarcasm]');
+
+sarcastic('I love Internet Explorer!'); // "[sarcasm] I love Internet Explorer! [/sarcasm]"
 ```
 
 # API
