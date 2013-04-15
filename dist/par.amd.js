@@ -1,4 +1,4 @@
-/*! par 0.1.0 Copyright (c) 2013 Alan Plum. MIT licensed. */
+/*! par 0.1.1 Copyright (c) 2013 Alan Plum. MIT licensed. */
 define(function(require, exports) {
 var slice = Array.prototype.slice;
 
