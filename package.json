@@ -37,7 +37,7 @@
       "firefox/nightly",
       "opera/latest",
       "opera/next",
-      "safari/5..latest",
+      "safari/4..latest",
       "ie/6..latest"
     ]
   }
