@@ -2,6 +2,8 @@
 
 **par** is a JavaScript implementation of partial function application (sometimes incorrectly called "currying").
 
+[![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par)
+
 # How is this different from [`Function#bind`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind)?
 
 The primary purpose of `Function#bind` is to create a closure to preserve a function's context (the `this` variable). Most implementations, including the one in ES 5, also allow partial function application.
