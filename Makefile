@@ -3,7 +3,6 @@ LICENSE_COMMENT="/*! par 0.1.0 Copyright (c) 2013 Alan Plum. MIT licensed. */"
 test:
 	@./node_modules/.bin/mocha \
 		--growl \
-		--require spec/common.js \
 		--reporter spec \
 		spec/*.spec.js
 

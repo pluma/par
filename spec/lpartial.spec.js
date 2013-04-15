@@ -1,4 +1,6 @@
-/*global describe, it, expect, par */
+/*global describe, it */
+var expect = require('expect.js'),
+    par = require('../');
 describe('lpartial', function() {
     var lpartial = par.lpartial;
     function args2arr() {

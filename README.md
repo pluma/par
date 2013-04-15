@@ -2,6 +2,8 @@
 
 **par** is a JavaScript implementation of partial function application (sometimes incorrectly called "currying").
 
+[![browser support](https://ci.testling.com/pluma/par.png)](https://ci.testling.com/pluma/par)
+
 [![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par)
 
 # How is this different from [`Function#bind`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind)?
