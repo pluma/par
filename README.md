@@ -4,7 +4,7 @@
 
 [![browser support](https://ci.testling.com/pluma/par.png)](https://ci.testling.com/pluma/par)
 
-[![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par)
+[![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par) [![NPM version](https://badge.fury.io/js/par.png)](http://badge.fury.io/js/par)
 
 # How is this different from [`Function#bind`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind)?
 
