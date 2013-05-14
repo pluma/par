@@ -1,4 +1,4 @@
-LICENSE_COMMENT="/*! par 0.1.1 Copyright (c) 2013 Alan Plum. MIT licensed. */"
+LICENSE_COMMENT="/*! par 0.1.2 Copyright (c) 2013 Alan Plum. MIT licensed. @preserve */"
 
 test:
 	@./node_modules/.bin/mocha \
@@ -28,16 +28,16 @@ dist/par.amd.js: dist/vendor
 	@echo $(LICENSE_COMMENT) > dist/par.amd.js
 	@echo "define(function(require, exports) {" >> dist/par.amd.js
 	@cat src/par.js >> dist/par.amd.js
-	@echo "});" >> dist/par.amd.js
+	@echo "return exports;});" >> dist/par.amd.js
 
 dist/par.min.js: dist/par.js
-	@./node_modules/.bin/uglifyjs dist/par.js > dist/par.min.js
+	@./node_modules/.bin/uglifyjs dist/par.js --comments -m > dist/par.min.js
 
 dist/par.globals.min.js: dist/par.globals.js
-	@./node_modules/.bin/uglifyjs dist/par.globals.js > dist/par.globals.min.js
+	@./node_modules/.bin/uglifyjs dist/par.globals.js --comments -m > dist/par.globals.min.js
 
 dist/par.amd.min.js: dist/par.amd.js
-	@./node_modules/.bin/uglifyjs dist/par.amd.js > dist/par.amd.min.js
+	@./node_modules/.bin/uglifyjs dist/par.amd.js --comments > dist/par.amd.min.js
 
 dist: dist/par.min.js dist/par.globals.min.js dist/par.amd.min.js
 
