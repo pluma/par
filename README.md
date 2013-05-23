@@ -86,7 +86,7 @@ function divideBy(x, y) {
     return x / y;
 }
 
-var divide4By = par.lpartial(divideBy, 4);
+var divide4By = par(divideBy, 4);
 console.log(divide4By(10)); // 0.4
 
 var divideBy4 = par.rpartial(divideBy, 4);
@@ -99,29 +99,34 @@ console.log(divideBy4(10)); // 2.5
 var par = require('par');
 
 function say() {
+    // This assumes a modern browser or recent version of IE
     console.log.apply(console, arguments);
 }
 
 say('I love Internet Explorer!'); // "I love Internet Explorer!"
 
-var sarcastic = par.rpartial(par.lpartial(say, '[sarcasm]'), '[/sarcasm]');
+var sarcastic = par.rpartial(par(say, '[sarcasm]'), '[/sarcasm]');
 
 sarcastic('I love Internet Explorer!'); // "[sarcasm] I love Internet Explorer! [/sarcasm]"
 ```
 
 # API
 
-## lpartial(fn, args…):Function
+## par(fn, args…):Function
 
 Creates a partially applied function that will append the initial arguments to the left-hand side of the argument list.
 
-## rpartial(fn, args…):Function
+## par.rpartial(fn, args…):Function
 
 Creates a partially applied function that will append the initial arguments to the right-hand side of the argument list.
 
-## partial(fn, args…):Function
+## par.lpartial(fn, args…):Function
 
-Alias for `lpartial`.
+Alias for `par`.
+
+## par.partial(fn, args…):Function
+
+Alias for `par`. Deprecated in 0.1.3.
 
 # License
 

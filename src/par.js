@@ -1,6 +1,15 @@
 var slice = Array.prototype.slice;
+var warn = function(msg) {
+    if (console) {
+        if (console.warn) {
+            console.warn(msg);
+        } else if (console.log) {
+            console.log('WARNING: ' + msg);
+        }
+    }
+}
 
-function lpartial(fn) {
+function par(fn) {
     var args0 = slice.call(arguments, 1);
     return function() {
         var argsN = slice.call(arguments, 0),
@@ -20,9 +29,12 @@ function rpartial(fn) {
     };
 }
 
-var exports = module.exports = lpartial;
-exports.rpartial = rpartial;
-exports.partial = lpartial;
+par.rpartial = rpartial
+par.lpartial = par
+par.partial = function() {
+    warn('par.partial is deprecated!');
+    var args = slice.call(arguments, 0);
+    return par.apply(this, args);
+};
 
-// legacy API for back compat
-exports.lpartial = lpartial;
+module.exports = par;
