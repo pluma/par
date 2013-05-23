@@ -20,6 +20,9 @@ function rpartial(fn) {
     };
 }
 
-exports.lpartial = lpartial;
+var exports = module.exports = lpartial;
 exports.rpartial = rpartial;
 exports.partial = lpartial;
+
+// legacy API for back compat
+exports.lpartial = lpartial;
