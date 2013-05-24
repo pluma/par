@@ -33,7 +33,7 @@
 
 <p><a href="https://ci.testling.com/pluma/par"><img src="https://ci.testling.com/pluma/par.png" alt="browser support"></a></p>
 
-<p><a href="https://travis-ci.org/pluma/par"><img src="https://travis-ci.org/pluma/par.png?branch=master" alt="Build Status"></a></p>
+<p><a href="https://travis-ci.org/pluma/par"><img src="https://travis-ci.org/pluma/par.png?branch=master" alt="Build Status"></a> <a href="http://badge.fury.io/js/par"><img src="https://badge.fury.io/js/par.png" alt="NPM version"></a></p>
 
 <h1>How is this different from <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind"><code>Function#bind</code></a>?</h1>
 
@@ -109,7 +109,7 @@ make <span class="o">&amp;&amp;</span> make dist
     <span class="k">return</span> <span class="nx">x</span> <span class="o">/</span> <span class="nx">y</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">var</span> <span class="nx">divide4By</span> <span class="o">=</span> <span class="nx">par</span><span class="p">.</span><span class="nx">lpartial</span><span class="p">(</span><span class="nx">divideBy</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">divide4By</span> <span class="o">=</span> <span class="nx">par</span><span class="p">(</span><span class="nx">divideBy</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">divide4By</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// 0.4</span>
 
 <span class="kd">var</span> <span class="nx">divideBy4</span> <span class="o">=</span> <span class="nx">par</span><span class="p">.</span><span class="nx">rpartial</span><span class="p">(</span><span class="nx">divideBy</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
@@ -121,31 +121,34 @@ make <span class="o">&amp;&amp;</span> make dist
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">par</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'par'</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">say</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// This assumes a modern browser or recent version of IE</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">console</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nx">say</span><span class="p">(</span><span class="s1">'I love Internet Explorer!'</span><span class="p">);</span>
-<span class="c1">// -&gt; "I love Internet Explorer!"</span>
+<span class="nx">say</span><span class="p">(</span><span class="s1">'I love Internet Explorer!'</span><span class="p">);</span> <span class="c1">// "I love Internet Explorer!"</span>
 
-<span class="kd">var</span> <span class="nx">sarcastic</span> <span class="o">=</span> <span class="nx">par</span><span class="p">.</span><span class="nx">rpartial</span><span class="p">(</span><span class="nx">par</span><span class="p">.</span><span class="nx">lpartial</span><span class="p">(</span><span class="nx">say</span><span class="p">,</span> <span class="s1">'[sarcasm]'</span><span class="p">),</span> <span class="s1">'[/sarcasm]'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">sarcastic</span> <span class="o">=</span> <span class="nx">par</span><span class="p">.</span><span class="nx">rpartial</span><span class="p">(</span><span class="nx">par</span><span class="p">(</span><span class="nx">say</span><span class="p">,</span> <span class="s1">'[sarcasm]'</span><span class="p">),</span> <span class="s1">'[/sarcasm]'</span><span class="p">);</span>
 
-<span class="nx">sarcastic</span><span class="p">(</span><span class="s1">'I love Internet Explorer!'</span><span class="p">);</span>
-<span class="c1">// -&gt; "[sarcasm] I love Internet Explorer! [/sarcasm]"</span>
+<span class="nx">sarcastic</span><span class="p">(</span><span class="s1">'I love Internet Explorer!'</span><span class="p">);</span> <span class="c1">// "[sarcasm] I love Internet Explorer! [/sarcasm]"</span>
 </pre></div>
 
 <h1>API</h1>
 
-<h2>lpartial(fn, args…):Function</h2>
+<h2>par(fn, args…):Function</h2>
 
 <p>Creates a partially applied function that will append the initial arguments to the left-hand side of the argument list.</p>
 
-<h2>rpartial(fn, args…):Function</h2>
+<h2>par.rpartial(fn, args…):Function</h2>
 
 <p>Creates a partially applied function that will append the initial arguments to the right-hand side of the argument list.</p>
 
-<h2>partial(fn, args…):Function</h2>
+<h2>par.lpartial(fn, args…):Function</h2>
 
-<p>Alias for <code>lpartial</code>.</p>
+<p>Alias for <code>par</code>.</p>
+
+<h2>par.partial(fn, args…):Function</h2>
+
+<p>Alias for <code>par</code>. Deprecated in 0.1.3.</p>
 
 <h1>License</h1>
 
