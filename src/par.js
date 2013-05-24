@@ -1,3 +1,4 @@
+/*global console */
 var slice = Array.prototype.slice;
 var warn = function(msg) {
     if (console) {
@@ -7,7 +8,7 @@ var warn = function(msg) {
             console.log('WARNING: ' + msg);
         }
     }
-}
+};
 
 function par(fn) {
     var args0 = slice.call(arguments, 1);
@@ -29,8 +30,8 @@ function rpartial(fn) {
     };
 }
 
-par.rpartial = rpartial
-par.lpartial = par
+par.rpartial = rpartial;
+par.lpartial = par;
 par.partial = function() {
     warn('par.partial is deprecated!');
     var args = slice.call(arguments, 0);
