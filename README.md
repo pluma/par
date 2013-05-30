@@ -4,7 +4,7 @@
 
 [![browser support](https://ci.testling.com/pluma/par.png)](https://ci.testling.com/pluma/par)
 
-[![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par) [![NPM version](https://badge.fury.io/js/par.png)](http://badge.fury.io/js/par)
+[![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par) [![NPM version](https://badge.fury.io/js/par.png)](http://badge.fury.io/js/par) [![Dependencies](https://david-dm.org/pluma/par.png)](https://david-dm.org/pluma/par)
 
 # How is this different from [`Function#bind`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind)?
 
@@ -123,10 +123,6 @@ Creates a partially applied function that will append the initial arguments to t
 ## par.lpartial(fn, args…):Function
 
 Alias for `par`.
-
-## par.partial(fn, args…):Function
-
-Alias for `par`. Deprecated in 0.1.3.
 
 # License
 
