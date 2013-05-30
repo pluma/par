@@ -27,15 +27,17 @@
         </ul>
       </header>
       <section>
-        <h1>Synopsis</h1>
+        <h1>
+<a name="synopsis" class="anchor" href="#synopsis"><span class="octicon octicon-link"></span></a>Synopsis</h1>
 
 <p><strong>par</strong> is a JavaScript implementation of partial function application (sometimes incorrectly called "currying").</p>
 
 <p><a href="https://ci.testling.com/pluma/par"><img src="https://ci.testling.com/pluma/par.png" alt="browser support"></a></p>
 
-<p><a href="https://travis-ci.org/pluma/par"><img src="https://travis-ci.org/pluma/par.png?branch=master" alt="Build Status"></a> <a href="http://badge.fury.io/js/par"><img src="https://badge.fury.io/js/par.png" alt="NPM version"></a></p>
+<p><a href="https://travis-ci.org/pluma/par"><img src="https://travis-ci.org/pluma/par.png?branch=master" alt="Build Status"></a> <a href="http://badge.fury.io/js/par"><img src="https://badge.fury.io/js/par.png" alt="NPM version"></a> <a href="https://david-dm.org/pluma/par"><img src="https://david-dm.org/pluma/par.png" alt="Dependencies"></a></p>
 
-<h1>How is this different from <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind"><code>Function#bind</code></a>?</h1>
+<h1>
+<a name="how-is-this-different-from-functionbind" class="anchor" href="#how-is-this-different-from-functionbind"><span class="octicon octicon-link"></span></a>How is this different from <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind"><code>Function#bind</code></a>?</h1>
 
 <p>The primary purpose of <code>Function#bind</code> is to create a closure to preserve a function's context (the <code>this</code> variable). Most implementations, including the one in ES 5, also allow partial function application.</p>
 
@@ -47,16 +49,20 @@
 
 <p>Another important distinction is that unlike <code>Function#bind</code>, <code>par</code> works in environments that don't support ECMAScript 5, such as legacy versions of Internet Explorer (versions 8 and lower) or Rhino (e.g. the version bundled with Sun JDK 1.6).</p>
 
-<h1>Install</h1>
+<h1>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h1>
 
-<h2>Node.js</h2>
+<h2>
+<a name="nodejs" class="anchor" href="#nodejs"><span class="octicon octicon-link"></span></a>Node.js</h2>
 
-<h3>With NPM</h3>
+<h3>
+<a name="with-npm" class="anchor" href="#with-npm"><span class="octicon octicon-link"></span></a>With NPM</h3>
 
 <div class="highlight"><pre>npm install par
 </pre></div>
 
-<h3>From source</h3>
+<h3>
+<a name="from-source" class="anchor" href="#from-source"><span class="octicon octicon-link"></span></a>From source</h3>
 
 <div class="highlight"><pre>git clone https://github.com/pluma/par.git
 <span class="nb">cd </span>par
@@ -64,35 +70,41 @@ npm install
 make <span class="o">&amp;&amp;</span> make dist
 </pre></div>
 
-<h2>Browser</h2>
+<h2>
+<a name="browser" class="anchor" href="#browser"><span class="octicon octicon-link"></span></a>Browser</h2>
 
-<h3>With component</h3>
+<h3>
+<a name="with-component" class="anchor" href="#with-component"><span class="octicon octicon-link"></span></a>With component</h3>
 
 <div class="highlight"><pre>component install pluma/par
 </pre></div>
 
 <p><a href="https://github.com/component/component">Learn more about component</a>.</p>
 
-<h3>With bower</h3>
+<h3>
+<a name="with-bower" class="anchor" href="#with-bower"><span class="octicon octicon-link"></span></a>With bower</h3>
 
 <div class="highlight"><pre>bower install par
 </pre></div>
 
 <p><a href="https://github.com/twitter/bower">Learn more about bower</a>.</p>
 
-<h3>With a CommonJS module loader</h3>
+<h3>
+<a name="with-a-commonjs-module-loader" class="anchor" href="#with-a-commonjs-module-loader"><span class="octicon octicon-link"></span></a>With a CommonJS module loader</h3>
 
 <p>Download the <a href="https://raw.github.com/pluma/par/master/dist/par.min.js">latest minified CommonJS release</a> and add it to your project.</p>
 
 <p><a href="http://wiki.commonjs.org/wiki/Modules/1.1">Learn more about CommonJS modules</a>.</p>
 
-<h3>With an AMD module loader</h3>
+<h3>
+<a name="with-an-amd-module-loader" class="anchor" href="#with-an-amd-module-loader"><span class="octicon octicon-link"></span></a>With an AMD module loader</h3>
 
 <p>Download the <a href="https://raw.github.com/pluma/par/master/dist/par.amd.min.js">latest minified AMD release</a> and add it to your project.</p>
 
 <p><a href="http://requirejs.org/docs/whyamd.html">Learn more about AMD modules</a>.</p>
 
-<h3>As a standalone library</h3>
+<h3>
+<a name="as-a-standalone-library" class="anchor" href="#as-a-standalone-library"><span class="octicon octicon-link"></span></a>As a standalone library</h3>
 
 <p>Download the <a href="https://raw.github.com/pluma/par/master/dist/par.globals.min.js">latest minified standalone release</a> and add it to your project.</p>
 
@@ -101,7 +113,8 @@ make <span class="o">&amp;&amp;</span> make dist
 
 <p>This makes the <code>par</code> module available in the global namespace.</p>
 
-<h1>Basic usage example</h1>
+<h1>
+<a name="basic-usage-example" class="anchor" href="#basic-usage-example"><span class="octicon octicon-link"></span></a>Basic usage example</h1>
 
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">par</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'par'</span><span class="p">);</span>
 
@@ -116,7 +129,8 @@ make <span class="o">&amp;&amp;</span> make dist
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">divideBy4</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// 2.5</span>
 </pre></div>
 
-<h1>Wrap-around example</h1>
+<h1>
+<a name="wrap-around-example" class="anchor" href="#wrap-around-example"><span class="octicon octicon-link"></span></a>Wrap-around example</h1>
 
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">par</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'par'</span><span class="p">);</span>
 
@@ -132,25 +146,26 @@ make <span class="o">&amp;&amp;</span> make dist
 <span class="nx">sarcastic</span><span class="p">(</span><span class="s1">'I love Internet Explorer!'</span><span class="p">);</span> <span class="c1">// "[sarcasm] I love Internet Explorer! [/sarcasm]"</span>
 </pre></div>
 
-<h1>API</h1>
+<h1>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h1>
 
-<h2>par(fn, args…):Function</h2>
+<h2>
+<a name="parfn-argsfunction" class="anchor" href="#parfn-argsfunction"><span class="octicon octicon-link"></span></a>par(fn, args…):Function</h2>
 
 <p>Creates a partially applied function that will append the initial arguments to the left-hand side of the argument list.</p>
 
-<h2>par.rpartial(fn, args…):Function</h2>
+<h2>
+<a name="parrpartialfn-argsfunction" class="anchor" href="#parrpartialfn-argsfunction"><span class="octicon octicon-link"></span></a>par.rpartial(fn, args…):Function</h2>
 
 <p>Creates a partially applied function that will append the initial arguments to the right-hand side of the argument list.</p>
 
-<h2>par.lpartial(fn, args…):Function</h2>
+<h2>
+<a name="parlpartialfn-argsfunction" class="anchor" href="#parlpartialfn-argsfunction"><span class="octicon octicon-link"></span></a>par.lpartial(fn, args…):Function</h2>
 
 <p>Alias for <code>par</code>.</p>
 
-<h2>par.partial(fn, args…):Function</h2>
-
-<p>Alias for <code>par</code>. Deprecated in 0.1.3.</p>
-
-<h1>License</h1>
+<h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
 
 <p>The MIT/Expat license.</p>
       </section>
