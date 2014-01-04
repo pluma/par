@@ -1,4 +1,4 @@
-/*! par 0.2.0 Copyright (c) 2013 Alan Plum. MIT licensed. @preserve */
+/*! par 0.2.1 Original author Alan Plum <me@pluma.io>. Released into the Public Domain under the UNLICENSE. @preserve */
 var slice = Array.prototype.slice;
 
 function par(fn) {

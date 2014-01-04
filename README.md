@@ -124,6 +124,6 @@ Creates a partially applied function that will append the initial arguments to t
 
 Alias for `par`.
 
-# License
+# Unlicense
 
-The MIT/Expat license.
+This is free and unencumbered public domain software. For more information, see http://unlicense.org/ or the accompanying [UNLICENSE](https://github.com/pluma/par/blob/master/UNLICENSE) file.
