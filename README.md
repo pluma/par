@@ -127,3 +127,6 @@ Alias for `par`.
 # Unlicense
 
 This is free and unencumbered public domain software. For more information, see http://unlicense.org/ or the accompanying [UNLICENSE](https://github.com/pluma/par/blob/master/UNLICENSE) file.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/pluma/par/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
