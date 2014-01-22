@@ -1,4 +1,4 @@
-/*! par 0.2.1 Original author Alan Plum <me@pluma.io>. Released into the Public Domain under the UNLICENSE. @preserve */
+/*! par 0.3.0 Original author Alan Plum <me@pluma.io>. Released into the Public Domain under the UNLICENSE. @preserve */
 define(function(require, exports, module) {
 var slice = Array.prototype.slice;
 

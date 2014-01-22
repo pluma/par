@@ -2,9 +2,14 @@
 
 **par** is a JavaScript implementation of partial function application (sometimes incorrectly called "currying").
 
+[![stability 3 - stable](http://b.repl.ca/v1/stability-3_--_stable-yellowgreen.png)
+](http://nodejs.org/api/documentation.html#documentation_stability_index) [![license - Unlicense](http://b.repl.ca/v1/license-Unlicense-lightgrey.png)](http://unlicense.org/)
+
 [![browser support](https://ci.testling.com/pluma/par.png)](https://ci.testling.com/pluma/par)
 
-[![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par) [![NPM version](https://badge.fury.io/js/par.png)](http://badge.fury.io/js/par) [![Dependencies](https://david-dm.org/pluma/par.png)](https://david-dm.org/pluma/par)
+[![Build Status](https://travis-ci.org/pluma/par.png?branch=master)](https://travis-ci.org/pluma/par) [![Coverage Status](https://coveralls.io/repos/pluma/par/badge.png?branch=master)](https://coveralls.io/r/pluma/par?branch=master) [![Dependencies](https://david-dm.org/pluma/par.png?theme=shields.io)](https://david-dm.org/pluma/par)
+
+[![NPM status](https://nodei.co/npm/par.png?compact=true)](https://npmjs.org/package/par)
 
 # How is this different from [`Function#bind`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind)?
 

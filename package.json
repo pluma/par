@@ -1,6 +1,6 @@
 {
   "name": "par",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "Alan Plum <me@pluma.io>",
   "description": "Simple partial function application.",
   "licenses": {
@@ -18,14 +18,17 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "mocha": "1.10.x",
-    "expect.js": "0.2.x",
-    "uglify-js": "2.3.x",
-    "jshint": "2.1.x"
+    "mocha": "~1.17",
+    "expect.js": "~0.2",
+    "uglify-js": "~2.4",
+    "jshint": "~2.4",
+    "istanbul": "~0.2",
+    "coveralls": "~2.6"
   },
   "main": "./dist/par.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "coveralls": "make coveralls"
   },
   "engines": {
     "node": ">=0.6"
