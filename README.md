@@ -3,7 +3,7 @@
 **par** is a JavaScript implementation of partial function application (sometimes incorrectly called "currying").
 
 [![stability 3 - stable](http://b.repl.ca/v1/stability-3_--_stable-yellowgreen.png)
-](http://nodejs.org/api/documentation.html#documentation_stability_index) [![license - Unlicense](http://b.repl.ca/v1/license-Unlicense-lightgrey.png)](http://unlicense.org/)
+](http://nodejs.org/api/documentation.html#documentation_stability_index) [![license - Unlicense](http://b.repl.ca/v1/license-Unlicense-lightgrey.png)](http://unlicense.org/) [![Flattr this](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=pluma&url=https://github.com/pluma/par)
 
 [![browser support](https://ci.testling.com/pluma/par.png)](https://ci.testling.com/pluma/par)
 
